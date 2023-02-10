@@ -43,6 +43,8 @@ CONFIG.name = "B_HLR_HLZE_CE" -- YOU MUST NAME IT! Used for horde_external_lua_c
 	Barney Brawler			  - 0.75 ($90)
 	Scientist Gunner (Pistol)#- 1.5 ($135)
 	Human Grunt#			  - 2.5 ($225)
+	Scientist Stinger		  - 1 ($90)
+	Barney Bruiser#			  - 2 ($180)
 	
 	npc_vj_hlrze_zombie
 	npc_vj_hlrze_zombie_barney
@@ -86,6 +88,8 @@ CONFIG.name = "B_HLR_HLZE_CE" -- YOU MUST NAME IT! Used for horde_external_lua_c
 	Headcrab
 	Zombie Soldier (Grenade)
 	Brute
+	Barney Brawler
+	Scientist Stinger
 	
 	- Wave 4
 	Zombie Barney
@@ -96,6 +100,7 @@ CONFIG.name = "B_HLR_HLZE_CE" -- YOU MUST NAME IT! Used for horde_external_lua_c
 	Crasher
 	Brute
 	Barney Brawler
+	Scientist Stinger
 	
 	- Wave 5
 	Beelzebub or Big Bertha or Barnabus, The Devourer
@@ -110,6 +115,8 @@ CONFIG.name = "B_HLR_HLZE_CE" -- YOU MUST NAME IT! Used for horde_external_lua_c
 	Zombie Soldier (Grenade)
 	Zombie Crasher
 	Barney Brawler
+	Scientist Stinger
+	Scientist Gunner
 	
 	- Wave 7
 	Zombie Soldier
@@ -120,7 +127,9 @@ CONFIG.name = "B_HLR_HLZE_CE" -- YOU MUST NAME IT! Used for horde_external_lua_c
 	Zombie Crasher
 	Zombie Female Assassin
 	Barney Brawler
+	Scientist Stinger
 	Scientist Gunner
+	Barney Bruiser
 	
 	- Wave 8
 	Zombie Soldier
@@ -131,7 +140,9 @@ CONFIG.name = "B_HLR_HLZE_CE" -- YOU MUST NAME IT! Used for horde_external_lua_c
 	Zombie Crasher
 	Zombie Female Assassin
 	Barney Brawler
+	Scientist Stinger
 	Scientist Gunner
+	Barney Bruiser
 	Human Grunt
 	
 	- Wave 9
@@ -142,6 +153,7 @@ CONFIG.name = "B_HLR_HLZE_CE" -- YOU MUST NAME IT! Used for horde_external_lua_c
 	Zombie Female Assassin
 	Barney Brawler
 	Scientist Gunner
+	Barney Bruiser
 	Human Grunt
 	
 	- Wave 10
@@ -212,6 +224,7 @@ CONFIG.enemies = {
         health_scale = 1,
         damage_scale = 1,
         reward_scale = 0.45,
+		color = Color(127,87,87),
     },
 
     Wave3_Zombie = {
@@ -273,6 +286,27 @@ CONFIG.enemies = {
         health_scale = 1,
         damage_scale = 1,
         reward_scale = 0.45,
+		color = Color(127,87,87),
+    },
+    Wave3_Barney = {
+        name = "Wave3_Barney",
+        class = "npc_vj_bhorde_hlze_barney_brawler",
+        weight = 0.90,
+        wave = 3,
+        is_elite = false,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 0.75,
+    },
+    Wave3_Stinger = {
+        name = "Wave3_Stinger",
+        class = "npc_vj_bhorde_hlze_scientist_stinger",
+        weight = 0.45,
+        wave = 3,
+        is_elite = false,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 1,
     },
 
     Wave4_ZombieBarney = {
@@ -344,16 +378,27 @@ CONFIG.enemies = {
         health_scale = 1,
         damage_scale = 1,
         reward_scale = 0.45,
+		color = Color(127,87,87),
     },
     Wave4_Barney = {
         name = "Wave4_Barney",
         class = "npc_vj_bhorde_hlze_barney_brawler",
-        weight = 0.75,
+        weight = 1.10,
         wave = 4,
         is_elite = false,
         health_scale = 1,
         damage_scale = 1,
         reward_scale = 0.75,
+    },
+    Wave4_Stinger = {
+        name = "Wave4_Stinger",
+        class = "npc_vj_bhorde_hlze_scientist_stinger",
+        weight = 0.90,
+        wave = 4,
+        is_elite = false,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 1,
     },
 	
     Wave5_Boss_Bertha = {
@@ -402,7 +447,7 @@ CONFIG.enemies = {
         weight = 1,
         wave = 5,
         is_elite = true,
-        health_scale = 75,
+        health_scale = 37,
         damage_scale = 1,
         reward_scale = 10,
 		model_scale = 1.25,
@@ -500,18 +545,38 @@ CONFIG.enemies = {
     Wave6_Barney = {
         name = "Wave6_Barney",
         class = "npc_vj_bhorde_hlze_barney_brawler",
-        weight = 0.90,
+        weight = 1.30,
         wave = 6,
         is_elite = false,
         health_scale = 1,
         damage_scale = 1,
         reward_scale = 0.75,
     },
+    Wave6_Stinger = {
+        name = "Wave6_Stinger",
+        class = "npc_vj_bhorde_hlze_scientist_stinger",
+        weight = 1,
+        wave = 6,
+        is_elite = false,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 1,
+    },
+    Wave6_Scienist = {
+        name = "Wave6_Scientist",
+        class = "npc_vj_bhorde_hlze_scientist_pistol",
+        weight = 0.35,
+        wave = 6,
+        is_elite = true,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 1.5,
+    },
 
     Wave7_ZombieGordon = {
         name = "Wave7_ZombieGordon",
         class = "npc_vj_hlrze_zombie_hev",
-        weight = 0.70,
+        weight = 0.50,
         wave = 7,
         is_elite = false,
         health_scale = 1,
@@ -521,7 +586,7 @@ CONFIG.enemies = {
     Wave7_Crab = {
         name = "Wave7_Crab",
         class = "npc_vj_hlrze_headcrab",
-        weight = 0.70,
+        weight = 0.50,
         wave = 7,
         is_elite = false,
         health_scale = 1,
@@ -571,12 +636,32 @@ CONFIG.enemies = {
     Wave7_Scienist = {
         name = "Wave7_Scientist",
         class = "npc_vj_bhorde_hlze_scientist_pistol",
-        weight = 0.35,
+        weight = 0.40,
         wave = 7,
         is_elite = true,
         health_scale = 1,
         damage_scale = 1,
         reward_scale = 1.5,
+    },
+    Wave7_Stinger = {
+        name = "Wave7_Stinger",
+        class = "npc_vj_bhorde_hlze_scientist_stinger",
+        weight = 0.75,
+        wave = 7,
+        is_elite = false,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 1,
+    },
+    Wave7_Bruiser = {
+        name = "Wave7_Bruiser",
+        class = "npc_vj_bhorde_hlze_barney_bruiser",
+        weight = 0.20,
+        wave = 7,
+        is_elite = true,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 2,
     },
 
     Wave8_ZombieGordon = {
@@ -642,7 +727,7 @@ CONFIG.enemies = {
     Wave8_Scienist = {
         name = "Wave8_Scientist",
         class = "npc_vj_bhorde_hlze_scientist_pistol",
-        weight = 0.50,
+        weight = 0.75,
         wave = 8,
         is_elite = true,
         health_scale = 1,
@@ -658,6 +743,26 @@ CONFIG.enemies = {
         health_scale = 1,
         damage_scale = 1,
         reward_scale = 2.5,
+    },
+    Wave8_Stinger = {
+        name = "Wave8_Stinger",
+        class = "npc_vj_bhorde_hlze_scientist_stinger",
+        weight = 1,
+        wave = 8,
+        is_elite = false,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 1,
+    },
+    Wave8_Bruiser = {
+        name = "Wave8_Bruiser",
+        class = "npc_vj_bhorde_hlze_barney_bruiser",
+        weight = 0.50,
+        wave = 8,
+        is_elite = true,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 2,
     },
 
     Wave9_Crab = {
@@ -713,7 +818,7 @@ CONFIG.enemies = {
     Wave9_Scienist = {
         name = "Wave9_Scientist",
         class = "npc_vj_bhorde_hlze_scientist_pistol",
-        weight = 0.90,
+        weight = 1,
         wave = 9,
         is_elite = true,
         health_scale = 1,
@@ -723,12 +828,32 @@ CONFIG.enemies = {
     Wave9_HGrunt = {
         name = "Wave9_HGrunt",
         class = "npc_vj_bhorde_hlze_hgrunt",
-        weight = 0.45,
+        weight = 0.50,
         wave = 9,
         is_elite = true,
         health_scale = 1,
         damage_scale = 1,
         reward_scale = 2.5,
+    },
+    Wave9_Stinger = {
+        name = "Wave9_Stinger",
+        class = "npc_vj_bhorde_hlze_scientist_stinger",
+        weight = 2,
+        wave = 9,
+        is_elite = false,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 1,
+    },
+    Wave9_Bruiser = {
+        name = "Wave9_Bruiser",
+        class = "npc_vj_bhorde_hlze_barney_bruiser",
+        weight = 0.75,
+        wave = 9,
+        is_elite = true,
+        health_scale = 1,
+        damage_scale = 1,
+        reward_scale = 2,
     },
 
     Wave10_Boss_Demon = {
@@ -765,7 +890,7 @@ CONFIG.enemies = {
 			is_boss = true,
 			end_wave = true,
 			unlimited_enemies_spawn = true,
-			enemies_spawn_threshold = 0.10,
+			enemies_spawn_threshold = 0.5,
 			music = "bbohcm/Tombstone_Arizona_butitstartsattheguitar.mp3",
 			music_duration = 221
 		},
@@ -785,16 +910,16 @@ CONFIG.enemies = {
 			is_boss = true,
 			end_wave = true,
 			unlimited_enemies_spawn = true,
-			enemies_spawn_threshold = 0.10,
+			enemies_spawn_threshold = 0.65,
 			music = "bbohcm/The_Death_That_I_Deservioli.mp3",
 			music_duration = 176
 		},
 		-- mutation = "shielding",
     },
-    Wave10_Crab = {
-        name = "Wave10_Crab",
-        class = "npc_vj_hlrze_headcrab",
-        weight = 1,
+    Wave10_Stinger = {
+        name = "Wave10_Stinger",
+        class = "npc_vj_bhorde_hlze_scientist_stinger",
+        weight = 0.75,
         wave = 10,
         is_elite = false,
         health_scale = 1,
