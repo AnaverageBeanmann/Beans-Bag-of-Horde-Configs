@@ -904,8 +904,8 @@ CONFIG.enemies = {
 			is_boss = true,
 			end_wave = true,
 			unlimited_enemies_spawn = true,
-			enemies_spawn_threshold = 0.75,
-			music = "bbohcm/Fucking_Abnormal.mp3",
+			enemies_spawn_threshold = 0,
+			music = "bbohcm/Shock_and_Panic.mp3",
 			music_duration = 192
 		},
 		mutation = "decay",
